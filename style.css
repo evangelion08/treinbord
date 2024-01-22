@@ -1,0 +1,221 @@
+:root {
+    --ns-blauw: #003082;
+    --ns-donker-blauw: #003082;
+    --ns-geel: #FFC917;
+}
+
+
+@font-face {
+    font-family: 'ns_sansbold';
+    src: url('ns-sans-bold.woff-webfont.woff2') format('woff2'),
+        url('ns-sans-bold.woff-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.infoBord {
+    font-family: "ns_sansbold";
+    color: var(--ns-donker-blauw);
+    font-size: 30px;
+
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr;
+    grid-column-gap: 2px;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+
+.klok {
+    background-color: #ffffff;
+    border: 2.5px solid #000000;
+}
+
+
+.treinInfo {
+    padding: 5%;
+    background-color: var(--ns-blauw);
+    display: grid;
+    border: 2.5px solid #000000;
+    grid-template-areas:
+        "vertrektijd treinsoort"
+        "bestemming bestemming"
+        "treinlengte treinlengte"
+        "volgende volgende"
+}
+
+
+.perron {
+    border: 2.5px solid #000000;
+    background-color: var(--ns-blauw);
+}
+
+
+.vertrektijd {
+    border-left: 2.5px solid #000000;
+    border-top: 2.5px solid #000000;
+
+    grid-area: vertrektijd;
+    background-color: #ffffff
+}
+
+.treinsoort {
+    border-right: 2.5px solid #000000;
+    border-top: 2.5px solid #000000;
+
+    grid-area: treinsoort;
+    background-color: #ffffff;
+}
+
+.treinsoort img {
+    width: 100px;
+    height: auto;
+    float: right;
+    margin-top: 10px;
+}
+
+.treinsoort-text {
+    font-size: 45px;
+    float: right;
+    margin-right: 35px;
+    margin-top: 2%;
+}
+
+.bestemming {
+    border-left: 2.5px solid #000000;
+    border-right: 2.5px solid #000000;
+
+    font-size: 50px;
+    grid-area: bestemming;
+    background-color: #ffffff;
+    height: 35vh;
+    padding-left: 10px;
+}
+
+.route {
+    font-size: 30px;
+    width: 740px;
+}
+
+.treinlengte {
+    border-left: 2.5px solid #000000;
+    border-right: 2.5px solid #000000;
+
+    grid-area: treinlengte;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.treinlengte img {
+    width: 55%;
+    height: auto;
+}
+
+.volgende {
+    border-left: 2.5px solid #000000;
+    border-bottom: 2.5px solid #000000;
+    border-right: 2.5px solid #000000;
+
+    grid-area: volgende;
+    background-color: var(--ns-donker-blauw);
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+#min {
+    font-size: 50px;
+    padding-left: 10px;
+}
+
+
+.klokdiv {
+    margin-top: 10%;
+}
+
+.nummerblok {
+    font-size: 50%;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.bb-en-spoor {
+    display: flex;
+}
+
+.blauwblokje {
+    background-color: var(--ns-blauw);
+    width: 25px;
+    height: 25px;
+}
+
+.spoortext {
+    padding: 0 0 0 10px;
+    font-size: 20px ;
+
+}
+
+.spoornummer {
+    color: var(--ns-blauw);
+    font-size: 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.spoorletter {
+    color: var(--ns-blauw);
+    font-size: 35px;
+    padding-top: 10%;
+    padding-right: 10%;
+}
+
+.welkspoor {
+    display: flex;
+    justify-content: center;
+}
+
+#clockContainer {
+    position: relative;
+    margin: 0 auto;
+    height: 15vw;
+    width: 15vw;
+    background-image: url("assets/klok.jpg"); 
+    background-size: 100%;
+}
+
+#hour,
+#minute,
+#second {
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour {
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    opacity: 0.8;
+}
+
+#minute {
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 48.9%;
+    opacity: 0.8;
+}
+
+#second {
+    width: 1%;
+    height: 40%;
+    top: 9%;
+    left: 49.25%;
+    opacity: 0.8;
+}
